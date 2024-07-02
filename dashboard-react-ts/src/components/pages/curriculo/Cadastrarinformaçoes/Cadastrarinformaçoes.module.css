@@ -1,0 +1,71 @@
+.formwrapper {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(187, 192, 183);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300%;
+    background-color: #b3abab;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border: none;
+}
+
+.button {
+    background-color: rgb(66, 69, 247);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fcf4f4;
+    margin-top: 5px;
+    width: 300px;
+}
+
+.textarea {
+    width: 300px;
+    height: 10rem;
+    resize: vertical;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f2f2;
+    margin-top: 5px;
+}
+
+.button:houver {
+    background-color: rgb(10, 84, 194);
+}
+.error {
+    border: 2px solid  #ff6666;
+}
+
+.errorMsg {
+    color: #ff6666;
+    font: size 14px; ;
+    margin-top: 5px;
+    font-weight: bold;
+}
