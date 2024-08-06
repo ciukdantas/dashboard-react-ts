@@ -1,24 +1,24 @@
-
 import React from 'react';
 
-import{ BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import  Layout  from './components/layout/Layout';
 
-import Home from './components/pages/home';
-import Cadastrarinformaçoes from './components/pages/curriculo/Cadastrarinformaçoes';
+import Login from './components/pages/login';
+import AuthRoutes from './routes/AuthRoutes';
+import { AuthProvider } from './contexts/AuthContexts';
 
-const App: React.FC = ()=> {
+
+const App: React.FC = () => {
   return (
+    <AuthProvider>
     <BrowserRouter>
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/curriculo/cadastro/informaçoes" element={<Cadastrarinformaçoes />} />
+      <Routes> 
+        <Route path="/login" element={<Login/>} />     
+        <Route path="/*" element={<AuthRoutes/>} />
       </Routes>
-    </Layout>
     </BrowserRouter>
-  ) 
+   </AuthProvider>
+  )
 };
 
 export default App;

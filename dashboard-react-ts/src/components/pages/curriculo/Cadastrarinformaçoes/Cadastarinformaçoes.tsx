@@ -36,7 +36,8 @@ const Cadrastarinformaçoes: React.FC = () => {
     return (
         <div className={styles.formwrapper}>
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-                <form>
+                <form className={styles.form}>
+
 
                     <h2 className={styles.title}>Cadrastar informaçoes</h2>
 
