@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, ErrorMessage, Form } from 'formik';
 import * as Yup from 'yup';
 import styles from './Cadastrarinformaçoes.module.css';
+import { createInformacoes } from "../../../../services/informacoesService";
 
 interface FormValues {
     foto: string;
@@ -26,8 +27,9 @@ const Cadastrarinformacoes: React.FC = () => {
         resumo: Yup.string().required('Resumo obrigatório'),
     });
 
-    const onSubmit = (values: FormValues, { resetForm }: { resetForm: () => void }) => {
+    const onSubmit = async (values: FormValues, { resetForm }: { resetForm: () => void }) => {
         console.log(values);
+        await createInformacoes(values);
         resetForm();
         alert('Formulário enviado com sucesso');
     };

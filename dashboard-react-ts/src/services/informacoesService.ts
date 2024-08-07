@@ -7,7 +7,7 @@ export interface Informacoes {
   cargo: string;
   resumo: string;
 }
-export async function createInformacoes  (informacoes: Informacoes): Promise<Informacoes> {
+export async function createInformacoes(informacoes: Informacoes): Promise<Informacoes> {
   const response = await api.post<Informacoes>('/informacoes', informacoes)
   return response.data
 }
